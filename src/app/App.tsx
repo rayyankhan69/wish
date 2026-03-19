@@ -1,6 +1,4 @@
-import { useRef, useState, useEffect } from 'react';
-import { Volume2, VolumeX } from 'lucide-react';
-import { motion } from 'motion/react';
+import { useRef, useState, useEffect, useCallback } from 'react';
 import { FloatingParticles } from './components/FloatingParticles';
 import { OpeningExperience } from './components/OpeningExperience';
 import { MessageSection } from './components/MessageSection';
@@ -9,16 +7,63 @@ import { TransitionSection } from './components/TransitionSection';
 import { EidSection } from './components/EidSection';
 import { OutfitCheckSection } from './components/OutfitCheckSection';
 import { FinalSection } from './components/FinalSection';
+import { VoiceMessageSection } from './components/VoiceMessageSection';
 import { SurprisePopup } from './components/SurprisePopup';
+
+import bgMusicSrc from '../assets/voices/Perfect-(Mr-Jat.in).mp3';
 
 export default function App() {
   const [showMainContent, setShowMainContent] = useState(false);
   const [showEidSection, setShowEidSection] = useState(false);
   const [showSurprisePopup, setShowSurprisePopup] = useState(false);
-  const [isMusicOn, setIsMusicOn] = useState(false);
-  
+  const [isAnyVoicePlaying, setIsAnyVoicePlaying] = useState(false);
+  const bgAudioRef = useRef<HTMLAudioElement | null>(null);
+
   const eidSectionRef = useRef<HTMLDivElement>(null);
   const messageSectionRef = useRef<HTMLDivElement>(null);
+
+  const tryPlayBgMusic = useCallback(async () => {
+    const audio = bgAudioRef.current;
+    if (!audio) return;
+    if (isAnyVoicePlaying) return;
+
+    audio.volume = 0.25;
+    audio.loop = true;
+
+    try {
+      await audio.play();
+    } catch {
+      // Autoplay may be blocked; we'll retry on first user interaction.
+    }
+  }, [isAnyVoicePlaying]);
+
+  useEffect(() => {
+    const onFirstUserGesture = () => {
+      void tryPlayBgMusic();
+      window.removeEventListener('pointerdown', onFirstUserGesture);
+      window.removeEventListener('keydown', onFirstUserGesture);
+      window.removeEventListener('touchstart', onFirstUserGesture);
+    };
+
+    window.addEventListener('pointerdown', onFirstUserGesture, { once: true });
+    window.addEventListener('keydown', onFirstUserGesture, { once: true });
+    window.addEventListener('touchstart', onFirstUserGesture, { once: true });
+
+    return () => {
+      window.removeEventListener('pointerdown', onFirstUserGesture);
+      window.removeEventListener('keydown', onFirstUserGesture);
+      window.removeEventListener('touchstart', onFirstUserGesture);
+    };
+  }, [tryPlayBgMusic]);
+
+  // Start (or resume) bg music when possible.
+  useEffect(() => {
+    if (isAnyVoicePlaying) {
+      bgAudioRef.current?.pause();
+      return;
+    }
+    void tryPlayBgMusic();
+  }, [isAnyVoicePlaying, tryPlayBgMusic]);
 
   // Show surprise popup after 30 seconds
   useEffect(() => {
@@ -46,6 +91,8 @@ export default function App() {
 
   return (
     <div className="relative w-full overflow-x-hidden">
+      <audio ref={bgAudioRef} src={bgMusicSrc} preload="auto" playsInline />
+
       {/* Opening experience */}
       {!showMainContent && <OpeningExperience onComplete={handleOpeningComplete} />}
 
@@ -54,23 +101,6 @@ export default function App() {
         <>
           {/* Floating particles overlay */}
           <FloatingParticles />
-
-          {/* Music toggle button */}
-          <motion.button
-            className="fixed top-8 right-8 z-40 bg-white/20 backdrop-blur-md p-3 rounded-full hover:bg-white/30 transition-all"
-            onClick={() => setIsMusicOn(!isMusicOn)}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            {isMusicOn ? (
-              <Volume2 className="w-6 h-6 text-pink-600" />
-            ) : (
-              <VolumeX className="w-6 h-6 text-pink-600" />
-            )}
-          </motion.button>
 
           {/* Message Section */}
           <div ref={messageSectionRef}>
@@ -89,13 +119,25 @@ export default function App() {
               <EidSection />
               <OutfitCheckSection />
               <FinalSection />
+              <VoiceMessageSection
+                onAnyVoicePlayingChange={(isPlaying) => setIsAnyVoicePlaying(isPlaying)}
+                onVoicePlayRequest={() => {
+                  // Stop bg music immediately when user taps play.
+                  bgAudioRef.current?.pause();
+                }}
+                onVoiceStop={() => {
+                  // Resume after voice ends/pauses (if autoplay was blocked earlier,
+                  // the voice click counts as a user gesture and this will succeed).
+                  void tryPlayBgMusic();
+                }}
+              />
             </div>
           )}
 
           {/* Surprise Popup */}
-          <SurprisePopup 
-            isOpen={showSurprisePopup} 
-            onClose={() => setShowSurprisePopup(false)} 
+          <SurprisePopup
+            isOpen={showSurprisePopup}
+            onClose={() => setShowSurprisePopup(false)}
           />
         </>
       )}

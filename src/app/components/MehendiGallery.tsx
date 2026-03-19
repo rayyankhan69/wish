@@ -70,20 +70,15 @@ export function MehendiGallery() {
           animate={isVisible ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <div className="flex items-center justify-center gap-4 mb-4">
-            <span className="text-5xl">🌿</span>
-            <h2
-              className="text-4xl md:text-6xl text-pink-900"
-              style={{
-                fontFamily: 'Georgia, serif',
-                textShadow: '0 2px 20px rgba(255, 192, 203, 0.4)',
-              }}
-            >
-              Tumhari Mehendi
-            </h2>
-            <span className="text-5xl">🌿</span>
-          </div>
-          <div className="text-6xl">😍</div>
+          <h2
+            className="text-4xl md:text-6xl text-pink-900"
+            style={{
+              fontFamily: 'Georgia, serif',
+              textShadow: '0 2px 20px rgba(255, 192, 203, 0.4)',
+            }}
+          >
+            Tumhari Mehendi 😍🌿 | From your Rayyan
+          </h2>
         </motion.div>
 
         {/* Message card */}
@@ -104,10 +99,13 @@ export function MehendiGallery() {
             style={{ fontFamily: 'Georgia, serif' }}
           >
             <p>
-              Aur jab tumne mehendi lagayi… bas wahi moment special ho gaya 💖
+              Aur jab tumne mehendi lagayi… us moment ne is chand raat ko aur bhi zyada special bana diya 💖 kyun ke mujhe pata hai ke tum us mehendi mein bhi utni hi khoobsurat lag rahi hogi jitni tum hamesha lagti ho | From your Rayyan
             </p>
             <p>
-              Sach kahun to mehendi bhi lucky hai ke usse tumhare haathon pe jagah mili… warna itni khoobsurati har kisi ko kahan milti hai 🥺✨
+              Sach kahun to mehendi bhi lucky hai ke usse tumhare haathon pe jagah mili… warna itni nazakat, itni khoobsurati har kisi ko naseeb nahi hoti 🥺✨ | From your Rayyan
+            </p>
+            <p>
+              Tumhare haathon pe woh design, woh color, woh shine… sab kuch perfect hoga, lekin phir bhi sab se zyada khoobsurat tum ho, hamesha ki tarah 💕 | From your Rayyan
             </p>
           </div>
 
@@ -124,11 +122,12 @@ export function MehendiGallery() {
             whileHover={{ scale: 1.02 }}
           >
             <p className="text-xl md:text-2xl text-pink-900 mb-4">
-              Aur haan… tumne pictures bhej ke dil khush kar diya 🤍
+              Aur haan… tumne pictures bhej ke dil literally khush kar diya 🤍 | From your Rayyan
             </p>
             <p className="text-lg md:text-xl text-pink-800">
-              Lekin ek baat yaad rakhna… mujhe "normal pics" nahi chahiye 😌<br />
-              Mujhe proper wali chahiye… full style, full vibe 💕
+              “Khoobsurat haath woh nahi jo sirf mehendi se sajte hain…”
+              <br />
+              “Khoobsurat woh hote hain jo pyaar, duaa aur narmi se bhare hote hain — bilkul tumhare 🤍✨”
             </p>
           </motion.div>
         </motion.div>

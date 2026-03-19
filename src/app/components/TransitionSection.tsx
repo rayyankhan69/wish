@@ -1,5 +1,4 @@
 import { motion } from 'motion/react';
-import { Sparkles } from 'lucide-react';
 
 interface TransitionSectionProps {
   onTransition: () => void;
@@ -85,15 +84,7 @@ export function TransitionSection({ onTransition }: TransitionSectionProps) {
           />
           
           {/* Button content */}
-          <span className="relative flex items-center gap-3">
-            Tap for something more special
-            <motion.span
-              animate={{ rotate: [0, 360] }}
-              transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
-            >
-              <Sparkles className="w-7 h-7" />
-            </motion.span>
-          </span>
+          <span className="relative">Tap for something more special ✨</span>
         </motion.button>
 
         {/* Decorative text */}
@@ -105,7 +96,7 @@ export function TransitionSection({ onTransition }: TransitionSectionProps) {
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
         >
-          Tum ready ho? 💖
+          Tum ready ho? Kyun ke ab jo hai woh sirf tumhare liye hai 💖 | From your Rayyan
         </motion.p>
       </motion.div>
     </section>

@@ -70,7 +70,7 @@ export function OpeningExperience({ onComplete }: OpeningExperienceProps) {
               >
                 {step === 1 && (
                   <TypewriterText
-                    text="For Someone Very Special… 💖"
+                    text="For Someone Who Means Everything To Me… 💖 | From your Rayyan"
                     speed={80}
                     delay={1000}
                     onComplete={handleFirstTextComplete}
@@ -95,7 +95,7 @@ export function OpeningExperience({ onComplete }: OpeningExperienceProps) {
                 }}
               >
                 <TypewriterText
-                  text="Meri Jan… Aqsa 🌙"
+                  text="Meri Jan… Aqsa 🌙 | Always from your Rayyan"
                   speed={100}
                   delay={0}
                   onComplete={handleSecondTextComplete}
@@ -127,7 +127,7 @@ export function OpeningExperience({ onComplete }: OpeningExperienceProps) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.3 }}
               >
-                Chand Mubarak Meri Jan Aqsa 🌙✨
+                Chand Mubarak Meri Jan Aqsa 🌙✨ | From your Rayyan
               </motion.h1>
 
               {/* Subtext with typewriter */}
@@ -142,7 +142,7 @@ export function OpeningExperience({ onComplete }: OpeningExperienceProps) {
                 transition={{ duration: 1, delay: 0.8 }}
               >
                 <TypewriterText
-                  text="Aaj ki raat sirf chand ki nahi… meri har soch tum tak aa rahi hai 💫"
+                  text="Aaj ki raat sirf chand ki nahi… meri har soch, har ehsaas, har dua sirf tum tak aa rahi hai 💫 kyun ke tum meri har khushi ka sab se khoobsurat hissa ho | From your Rayyan"
                   speed={50}
                   delay={0}
                   onComplete={handleSubtextComplete}

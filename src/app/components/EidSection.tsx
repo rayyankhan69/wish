@@ -127,7 +127,7 @@ export function EidSection() {
               textShadow: '0 0 30px rgba(255, 215, 0, 0.3)',
             }}
           >
-            Eid Mubarak
+            Eid Mubarak 🌙✨
           </h2>
           <motion.h3
             className="text-4xl md:text-5xl text-pink-900"
@@ -144,7 +144,7 @@ export function EidSection() {
               ease: 'easeInOut',
             }}
           >
-            Meri Pyari Aqsa 🤍🌙
+            Meri Pyari Aqsa 🤍 | From your Rayyan
           </motion.h3>
         </motion.div>
 
@@ -170,7 +170,7 @@ export function EidSection() {
               animate={isVisible ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 0.8 }}
             >
-              Aaj ka din sirf Eid ka nahi… meri taraf se tumhare liye ek special dua ka din hai.
+              Aaj ka din sirf Eid ka nahi… meri taraf se tumhare liye ek special feeling, ek special dua aur ek special ehsaas ka din hai 💖 | From your Rayyan
             </motion.p>
             
             <motion.p
@@ -178,7 +178,7 @@ export function EidSection() {
               animate={isVisible ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 1 }}
             >
-              Meri dua hai ke tum hamesha khush raho, tumhari life mein kabhi udaasi na aaye, aur tumhari har wish poori ho.
+              Meri har dua mein sirf ek hi cheez hoti hai… ke tum hamesha khush raho, tumhari life hamesha roshan rahe, aur tumhari aankhon mein kabhi udaasi na aaye 🤲✨ | From your Rayyan
             </motion.p>
             
             <motion.p
@@ -187,7 +187,7 @@ export function EidSection() {
               animate={isVisible ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 1.2 }}
             >
-              Tum sirf ek insan nahi ho… tum meri zindagi ka sab se khoobsurat ehsaas ho 💖
+              Tum sirf ek insan nahi ho… tum meri zindagi ka sab se khoobsurat ehsaas ho, ek aisi feeling jo har din ko better bana deti hai 💕 | From your Rayyan
             </motion.p>
           </div>
 
@@ -204,7 +204,7 @@ export function EidSection() {
             whileHover={{ scale: 1.02 }}
           >
             <p className="text-xl md:text-2xl text-pink-900">
-              Aur haan… apni smile kabhi lose mat karna, kyun ke woh meri sab se favorite cheez hai ✨
+              Aur haan… apni smile kabhi lose mat karna, kyun ke woh meri sab se favorite cheez hai ✨ aur meri har khushi usi se judi hai | From your Rayyan
             </p>
           </motion.div>
         </motion.div>

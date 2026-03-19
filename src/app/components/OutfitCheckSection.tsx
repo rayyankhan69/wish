@@ -85,7 +85,7 @@ export function OutfitCheckSection() {
                 textShadow: '0 2px 20px rgba(255, 192, 203, 0.4)',
               }}
             >
-              Eid Look Check
+              Eid Look Check 👀✨ | From your Rayyan
             </h2>
             <motion.div
               animate={{ scale: [1, 1.2, 1] }}
@@ -94,7 +94,6 @@ export function OutfitCheckSection() {
               <Sparkles className="w-12 h-12 text-pink-900" />
             </motion.div>
           </div>
-          <div className="text-5xl">👀✨</div>
         </motion.div>
 
         {/* Main card */}
@@ -119,7 +118,7 @@ export function OutfitCheckSection() {
               animate={isVisible ? { opacity: 1 } : {}}
               transition={{ delay: 0.6 }}
             >
-              Aur ab sab se important baat… 😌
+              Aur ab sab se important baat… dhyaan se suno 😌 | From your Rayyan
             </motion.p>
             
             <motion.p
@@ -128,7 +127,7 @@ export function OutfitCheckSection() {
               animate={isVisible ? { opacity: 1 } : {}}
               transition={{ delay: 0.8 }}
             >
-              Kal Eid hai… aur mujhe tumhara full outfit dekhna hai 💖
+              Kal Eid hai… aur mujhe tumhara full outfit dekhna hai 💖 sirf imagine nahi, proper dekhna hai | From your Rayyan
             </motion.p>
             
             <motion.p
@@ -136,7 +135,14 @@ export function OutfitCheckSection() {
               animate={isVisible ? { opacity: 1 } : {}}
               transition={{ delay: 1 }}
             >
-              Sirf mehendi pe kaam nahi chalega… complete look chahiye 👗✨
+              Sirf mehendi pe kaam nahi chalega… mujhe complete look chahiye, from head to toe 👗✨ | From your Rayyan
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={isVisible ? { opacity: 1 } : {}}
+              transition={{ delay: 1.2 }}
+            >
+              Tumhara dress, tumhari styling, tumhari vibe… sab kuch dekhna hai kyun ke mujhe pata hai tum sab se zyada khoobsurat lagogi 💕 | From your Rayyan
             </motion.p>
           </div>
 
@@ -153,14 +159,14 @@ export function OutfitCheckSection() {
             whileHover={{ scale: 1.02 }}
           >
             <p className="text-xl md:text-2xl text-pink-900 text-center mb-4">
-              Proper pics bhejni hain… full outfit, full style, full queen vibe 😌💕
+              Proper pics bhejni hain… full outfit, full style, full queen vibe 😌💕 koi compromise nahi
             </p>
             <motion.p
               className="text-lg md:text-xl text-pink-800 text-center"
               animate={{ scale: [1, 1.05, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              Main wait karunga… ignore mat karna 😏
+              Main wait karunga… aur is baar ignore bilkul allow nahi hai 😏 warna fine lagega
             </motion.p>
           </motion.div>
 

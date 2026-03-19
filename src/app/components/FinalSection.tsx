@@ -128,10 +128,10 @@ export function FinalSection() {
             transition={{ delay: 0.6 }}
           >
             <p>
-              Tum meri choti si jaan ho… aur meri har dua mein tumhara naam hota hai 🤲💫
+              Tum meri choti si jaan ho… aur meri har dua, har khushi, har soch mein sirf tum hoti ho 🤲💫 | From your Rayyan
             </p>
             <p className="text-2xl md:text-3xl">
-              Khush raho, hansti raho… hamesha
+              Khush raho, hansti raho… aur hamesha isi tarah meri life ko roshan karti raho 💖 | From your Rayyan
             </p>
           </motion.div>
 
@@ -146,7 +146,7 @@ export function FinalSection() {
               className="text-3xl md:text-4xl text-pink-900"
               style={{ fontFamily: 'Georgia, serif' }}
             >
-              – Always yours 💖
+              – Always yours, Rayyan 💖
             </p>
           </motion.div>
 

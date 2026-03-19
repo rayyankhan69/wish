@@ -70,7 +70,7 @@ export function SurprisePopup({ isOpen, onClose }: SurprisePopupProps) {
                     textShadow: '0 4px 20px rgba(0,0,0,0.2)',
                   }}
                 >
-                  Hidden Surprise!
+                  Hidden Surprise! 🎀
                 </h3>
 
                 <p
@@ -80,7 +80,7 @@ export function SurprisePopup({ isOpen, onClose }: SurprisePopupProps) {
                     textShadow: '0 2px 10px rgba(0,0,0,0.15)',
                   }}
                 >
-                  Smile karo… warna fine lagega 😌💖
+                  Smile karo… warna fine lagega 😌💖 | From your Rayyan
                 </p>
 
                 <motion.div

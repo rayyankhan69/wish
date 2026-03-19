@@ -73,7 +73,7 @@ export function MessageSection() {
           <p className="text-pink-900">
             {isVisible && (
               <TypewriterText
-                text="Meri zargey, meri qurban, meri cute si baby… 🥺❤️"
+                text="Meri zargey, meri qurban, meri sab se pyari cute si baby… 🥺❤️ | From your Rayyan"
                 speed={40}
                 delay={200}
               />
@@ -82,7 +82,7 @@ export function MessageSection() {
           <p className="text-pink-800">
             {isVisible && (
               <TypewriterText
-                text="Aaj chand raat hai… lekin meri raat tab hi khoobsurat hoti hai jab mujhe tum yaad aati ho."
+                text="Aaj chand raat hai… aur poori duniya is khoobsurat raat ko celebrate kar rahi hai, lekin meri raat tab hi mukammal hoti hai jab mujhe tum yaad aati ho, jab mera dil sirf tumhara naam leta hai | From your Rayyan"
                 speed={35}
                 delay={2500}
               />
@@ -91,9 +91,18 @@ export function MessageSection() {
           <p className="text-pink-800">
             {isVisible && (
               <TypewriterText
-                text="Sach kahun to chand bhi aaj thoda jealous hoga… kyun ke meri nazar mein sab se zyada roshan cheez tumhari muskurahat hai 🌸"
+                text="Sach kahun to aaj chand bhi thoda jealous hoga… kyun ke meri nazar mein sab se zyada roshan, sab se zyada khoobsurat cheez tumhari muskurahat hai 🌸 woh muskurahat jo meri har tension ko khatam kar deti hai | From your Rayyan"
                 speed={35}
                 delay={6500}
+              />
+            )}
+          </p>
+          <p className="text-pink-800">
+            {isVisible && (
+              <TypewriterText
+                text="Tumhari ek choti si smile mere liye itni important hai ke uske saamne har cheez choti lagti hai… aur main bas ye chahta hoon ke tum hamesha isi tarah hansti raho, bina kisi fikar ke 🤍 | From your Rayyan"
+                speed={35}
+                delay={12500}
                 onComplete={handleAllComplete}
               />
             )}
@@ -115,9 +124,9 @@ export function MessageSection() {
             className="text-xl md:text-2xl text-pink-900 italic text-center leading-relaxed"
             style={{ fontFamily: 'Georgia, serif' }}
           >
-            "Chand nikla to teri yaad bhi saath aayi,
+            Chand nikla to teri yaad bhi saath aayi,
             <br />
-            Is haseen raat mein bas teri kami nazar aayi…" 🌙
+            Is haseen raat mein bas teri kami nazar aayi… 🌙
           </p>
         </motion.div>
 
